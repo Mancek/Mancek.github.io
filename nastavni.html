@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Manuel" />
+		<title>HTML&CSS Versions</title>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+		rel="stylesheet"
+		/>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
+		
+		<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+		<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="icon" href="favicon.ico?" />
+	</head>
+	<body>
+		<nav>
+			<div>
+				<a href="./index.html" class="nav-link">HTML</a>
+			</div>
+			<div>
+				<a href="./css.html" class="nav-link">CSS</a>
+			</div>
+			<div>
+				<a href="./nastavni.html" class="nav-link">Nastavni plan</a>
+			</div>
+			<div>
+				<a id="btnKontakt" href="#" class="nav-link">Kontakt</a>
+			</div>
+			
+		</nav>
+		<div class="KolegijiNaziv">
+			<div>
+				<h3>Naziv kolegija:</h3>
+			</div>
+			<div class="kolegijTxtbox">
+				<input id="txtKolegiji" type="text" value="" />
+			</div>
+		</div>
+		<main>
+			<table class="nastavni-plan">
+				<thead>
+					<th>Kolegij</th>
+					<th>ECTS</th>
+					<th>Sati</th>
+					<th>P</th>
+					<th>V</th>
+					<th>Tip</th>
+					<th>Semestar</th>
+					<th></th>
+				</thead>
+				<tbody></tbody>
+				<tfoot>
+					<tr>
+						<td>Ukupno:</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tfoot>
+			</table>
+		</main>
+		<form id="Kontakt" title="Kontakt" action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="get">
+			<div>
+				<label for="name">Puno ime:</label>
+			</div>
+			<div>
+			<input required id="name" type="text" value="" />
+			</div>
+			<div>
+				<label for="email">E-mail:</label>
+			</div>
+			<div>
+				<input required id="email" type="email" value="" />
+			</div>
+			<div>
+				<label for="importance">Važnost poruke:</label>
+			</div>
+			<div>
+				<select id="importance">
+					<option value="low">Niska</option>
+					<option value="high">Visoka</option>
+				</select>
+			</div>
+			<div>
+				<label for="message">Vaša poruka:</label>
+			</div>
+			<div>
+				<textarea required cols="56" rows="10" id="txtNapomena"
+			></textarea>
+			</div>
+			<div>
+				<label for="newsletter">Primaj newsletter: </label>
+				<input id="newsletter" type="checkbox" value="" />
+			</div>
+			<div>
+				<button id="odustani" type="reset">Odustani</button>
+				<button id="posalji" type="submit">Pošalji</button>
+			</div>
+		</form>
+	</body>
+	<script src="script.js"></script>
+    <script src="nastavni.js"></script>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Manuel" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet" />
+		<title>HTML&CSS Verzije</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
+
+		<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+		<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="icon" href="favicon.ico?" />
+	</head>
+	<body>
+		<nav>
+			<div>
+				<a href="./index.html" class="nav-link">HTML</a>
+			</div>
+			<div>
+				<a href="./css.html" class="nav-link">CSS</a>
+			</div>
+			<div>
+				<a href="./nastavni.html" class="nav-link">Nastavni plan</a>
+			</div>
+			<div>
+				<a id="btnKontakt" href="#" class="nav-link">Kontakt</a>
+			</div>
+		</nav>
+
+		<aside>
+			<div>
+				<h3 class="navigation-title">Navigacija</h3>
+			</div>
+			<ul>
+				<li><a href="#css-main" class="inner-nav-link">CSS</a></li>
+				<li><a href="#animations" class="inner-nav-link">CSS animacije</a></li>
+				<li><a href="#calculations" class="inner-nav-link">CSS kalkukacije</a></li>
+				<li><a href="#gradients" class="inner-nav-link">CSS gradijenti</a></li>
+				<li><a href="#fonts" class="inner-nav-link">Fontovi</a></li>
+				<li><a href="#borders" class="inner-nav-link">Border slike</a></li>
+				<li><a href="#queries" class="inner-nav-link">Media Queries</a></li>
+			</ul>
+		</aside>
+
+		<main>
+			<div class="main-image-centered">
+				<img src="./images/CSS3_logo.png" style="width: 100%;" alt="css logo" />
+			</div>
+			<section>
+				<h1 class="version-header" id="css-main">CSS</h1>
+				<p class="margined-paragraph">
+					<abbr title="Cascading Style Sheets">CSS</abbr> je jezik stiliziranja koji služi za
+					opisivanje izgled dokumenta napisanog na jeziku kao što je HTML. CSS je temeljna
+					tehnologija World Wide Weba, zajedno s HTML-om i JavaScript-om.
+				</p>
+				<p class="margined-paragraph">
+					CSS je dizajniran tako da omogući odvajanje prezentacije i sadržaja, uključujući izgled,
+					boje i fontove. Ovo odvajanje može poboljšati dostupnost sadržaja, pružiti veću
+					fleksibilnost i kontrolu u specificiranju karakteristika prezentacije, omogućiti više web
+					stranica za dijeljenje oblikovanja specificiranjem odgovarajućeg CSS-a u zasebnoj .css
+					datoteci i smanjiti složenost i ponavljanje strukturnog sadržaja.
+				</p>
+				<p class="margined-paragraph">
+					Sada ćemo objasnit neka svojstva CSS-a koja su prisutna samo u novijim verzijama, te koje
+					možda još nisu podržane u najnovijim verzijama web preglednika.
+				</p>
+			</section>
+			<section>
+				<h2 class="sub-header" id="animations">CSS animacije</h2>
+				<p class="margined-paragraph">
+					CSS animacije dopuštaju animaciju HTML elemenata bez korištenja JavaScript-a.
+				</p>
+				<div class="animation-demo">
+					Animacije!
+				</div>
+				<p class="margined-paragraph">
+					Naravno, animacije nisu podržane na starijim preglednicima. Animacije se mogu stvarati na
+					dva načina. Prvi način je uz pomoć <code>transition</code> CSS svojstva. Sljedeći način
+					stvaranja animacija je uz pomoć <code>@keyframe</code> pravila. Ako bi koristili
+					<code>@keyframe</code>
+					za gore navedeni primjer, to bi izgledalo ovako:
+					<code>
+						@keyframes animation-demo {<br />
+						&nbsp;&nbsp;from { background-color: red; } <br />
+						&nbsp;&nbsp;to { background-color: green; } <br />
+						}
+						<br />
+						.animation-demo { <br />
+						&nbsp;&nbsp;padding: 5px; <br />
+						&nbsp;&nbsp;animation: animation-demo 4s alternate ease-in-out infinite;<br />
+						}
+					</code>
+				</p>
+			</section>
+			<section>
+				<h2 class="sub-header" id="calculations">CSS kalkukacije</h2>
+				<p class="margined-paragraph">
+					CSS kalkulacije nam dopuštaju kalkulaciju jednostavnijih jednadžba uz pomoć
+					<code>calc()</code> funkcije.
+				</p>
+				<div class="calc-example">
+					Primjer kalkulacije
+				</div>
+				<code>
+					width: calc(10vw + 30px + 10rem);
+				</code>
+				<div class="margined-paragraph">
+					Jedno važno svojstvo <code>calc()</code> funkcije je da nam dopušta zbrajanje različitih
+					jedinica za veličinu. Tako smo npr. u ovom primjeru zbrajali <code>vw</code> jedinice,
+					<code>px</code> jedinice i <code>rem</code> jedinice.
+				</div>
+			</section>
+			<section>
+				<h2 class="sub-header" id="gradients">CSS gradijenti</h2>
+				<p class="margined-paragraph">
+					Gradijenti nam omogućuju stvaranje svakavih slika koje se većinom koriste kao pozadine na
+					web stranicama.
+				</p>
+				<div class="flex-wrap">
+					<div class="grad-example grad-1"></div>
+					<div class="grad-example grad-2"></div>
+					<div class="grad-example grad-3"></div>
+				</div>
+				<p class="margined-paragraph">
+					Ima puno vrsta gradijenta, u prva dva primjera korišten je <code>linear-gradient()</code>,
+					dok je u trećem primjeru korišten <code>radial-gradient()</code>. Ove funkcije primaju
+					puno različitih parametra, te je potencijal s njima ogroman. Za generiranje gradijenta
+					često se koriste generatori poput
+					<a class="website-link"href="https://www.colorzilla.com/gradient-editor/">ovog.</a>
+				</p>
+			</section>
+			<section>
+				<h2 class="sub-header" id="fonts">Fontovi</h2>
+				<p class="margined-paragraph">
+					Možda je teško za vjerovati, ali prije samo nekoliko godina, postojala je samo nekolicina fontova koji su se mogli koristiti na web-stranicama. Sada imamo pomagala poput
+					<a class="website-link" href="https://fonts.google.com/">Google Fonts</a> koji nam dopuštaju dodavanje fontova
+					na web stranice bez ikakvih problema.
+				</p>
+				<div class="font-example font-1">Primjer fonta broj 1</div>
+				<div class="font-example font-2">Primjer fonta broj 2</div>
+				<div class="font-example font-3">Primjer fonta broj 3</div>
+				<div class="font-example font-4">Primjer fonta broj 4</div>
+				<p class="margined-paragraph">
+					Fontovi se mogu uvesti u web stranice na nekoliko načina. Može se koristiti
+					<code>&lt;link /></code> element u HTML-u, ili pak uz pomoć <code>@import</code> pravila.
+				</p>
+				<p>
+					U HTML-u: <code>&lt;link href="link-fonta" rel="stylesheet"></code> <br />
+					U CSS-u: <code>@import url('link-fonta');</code> <br />Nakon što uvezemo neki font, možemo
+					ga koristiti u CSS-u uz pomoć <code>font-family</code> pravila. <br />
+					<code>
+						.font-1 { <br />
+						&nbsp;&nbsp;font-family: "Ime Fonta"; <br />
+						}
+					</code>
+				</p>
+			</section>
+			<section>
+				<h2 class="sub-header" id="borders">Border slike</h2>
+
+				<p class="margined-paragraph">
+					Još jedno važno novo svojstvo je mogućnost korištenja slika kao border.
+				</p>
+				<div class="border-example">Primjer slikovitog bordera!</div>
+				<p class="margined-paragraph">
+					Slika korištena kao border:
+				</p>
+				<div>
+					<img
+						src="https://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/border.png"
+						alt="border"
+					/>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="sub-header" id="queries">Media Queries</h2>
+				<p class="margined-paragraph">
+					Jedno od najvažnijih dodataka u novijim verzijama CSS-a su media queries. Oni nam pružaju
+					mnogo mogućnosti, ali najvažnija je mogućnost drugačiji prikaz stranice za mobitele,
+					tablete i računala, ovisno o veličini ekrana.
+				</p>
+				<h3><strong>Računalo</strong></h3>
+				<img src="https://www.w3schools.com/css/rwd_desktop.png" alt="prikaz na racunalu" />
+				<h3 style="margin-top: 3rem;"><strong>Mobitel</strong></h3>
+				<img src="https://www.w3schools.com/css/rwd_phone.png" alt="prikaz na mobitelu" />
+				<p class="margined-paragraph">
+					Na primjer možemo mijenjati boju ove kocke ovisno o tome je li stranica otvorena na mobitelu ili na
+					računalu:
+				</p>
+				<div class="media-query-example">
+					Kocka
+				</div>
+				<p class="margined-paragraph">
+					Sada će pozadina ove kocke biti zelena na računalu sa bijelim tekstom, dok će se na
+					mobitelu i ostalim manjim ekranima prikazivati kao žuta kocka sa crnim tekstom.
+				</p>
+				<p class="margined-paragraph">
+					To smo postigli ovako: <br />
+					dali smo kocki pozadinsku boju i boju teksta uz pomoć običnog CSS-a <br />
+					<code>
+						.media-query-example { <br />
+						&nbsp;&nbsp;background-color: green; <br />
+						&nbsp;&nbsp;color: white; <br />
+						}
+					</code>
+					<br />
+					Zatim smo napravili media query pravilo koje će promijeniti pozadinsku boju kada je ekran
+					manji od <code>768px</code>: <br />
+					<code>
+						@media only screen and (max-width: 768px) { <br />
+						&nbsp;&nbsp;.media-query-example { <br />
+						&nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow; <br />
+						&nbsp;&nbsp;&nbsp;&nbsp;color: black; <br />
+						&nbsp;&nbsp;} <br />
+						}
+					</code>
+				</p>
+				<p class="margined-paragraph">Još jedan primjera korištenja media querya:</p>
+				<div class="query-example-container">
+					<div class="col-1">Prvi</div>
+					<div class="col-2">Drugi</div>
+					<div class="col-3">Treći</div>
+					<div style="clear: both;"></div>
+				</div>
+				<p class="margined-paragraph">
+					Sada će se gornje plave kockice nalaziti jedna do druge na računalu, dok će na mobitelu
+					svaka biti u svojem redu.
+				</p>
+			</section>
+		</main>
+
+		<footer>
+			<h1 class="version-header">Literatura</h1>
+			<div>
+				<a href="https://spaceninja.com/2018/09/18/what-is-modular-css/"
+					>https://spaceninja.com/2018/09/18/what-is-modular-css/</a
+				>
+			</div>
+			<div>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+					>https://developer.mozilla.org/en-US/docs/Web/CSS</a
+				>
+			</div>
+			<div>
+				<a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets"
+					>https://en.wikipedia.org/wiki/Cascading_Style_Sheets</a
+				>
+			</div>
+			<div>
+				<a href="https://www.w3.org/Style/CSS20/history.html"
+					>https://www.w3.org/Style/CSS20/history.html</a
+				>
+			</div>
+			<div>
+				<a href="https://www.w3.org/Style/CSS20/challenges.html"
+					>https://www.w3.org/Style/CSS20/challenges.html</a
+				>
+			</div>
+			<div>
+				<a href="https://css-tricks.com/is-web-design-easier-or-harder-than-it-was-10-years-ago/"
+					>https://css-tricks.com/is-web-design-easier-or-harder-than-it-was-10-years-ago/</a
+				>
+			</div>
+			<div>
+				<a href="https://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use"
+					>https://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use</a
+				>
+			</div>
+			<div>
+				<a
+					href="http://www.css3.info/css3-development-status-an-explanation-of-w3c-maturity-levels/"
+					>http://www.css3.info/css3-development-status-an-explanation-of-w3c-maturity-levels/</a
+				>
+			</div>
+		</footer>
+		<form id="Kontakt" title="Kontakt" action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="get">
+			<div>
+				<label for="name">Puno ime:</label>
+			</div>
+			<div>
+			<input required id="name" type="text" value="" />
+			</div>
+			<div>
+				<label for="email">E-mail:</label>
+			</div>
+			<div>
+				<input required id="email" type="email" value="" />
+			</div>
+			<div>
+				<label for="importance">Važnost poruke:</label>
+			</div>
+			<div>
+				<select id="importance">
+					<option value="high">Visoka</option>
+					<option value="low">Niska</option>
+				</select>
+			</div>
+			<div>
+				<label for="message">Vaša poruka:</label>
+			</div>
+			<div>
+				<textarea required cols="56" rows="10" id="txtNapomena"
+			></textarea>
+			</div>
+			<div>
+				<label for="newsletter">Primaj newsletter: </label>
+				<input id="newsletter" type="checkbox" value="" />
+			</div>
+			<div>
+				<button id="odustani" type="reset">Odustani</button>
+				<button id="posalji" type="submit">Pošalji</button>
+			</div>
+		</form>
+	</body>
+	<script src="script.js"></script>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Manuel" />
+		<title>HTML&CSS Versions</title>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+		rel="stylesheet"
+		/>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
+		
+		<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+		<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+		
+		<script src="fancybox/jquery.fancybox.js"></script>
+		<link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="icon" href="favicon.ico?" />
+	</head>
+	<body>
+		<nav>
+			<div>
+				<a href="./index.html" class="nav-link">HTML</a>
+			</div>
+			<div>
+				<a href="./css.html" class="nav-link">CSS</a>
+			</div>
+			<div>
+				<a href="./nastavni.html" class="nav-link">Nastavni plan</a>
+			</div>
+			<div>
+				<a id="btnKontakt" href="#" class="nav-link">Kontakt</a>
+			</div>
+			
+		</nav>
+
+		<aside>
+			<div>
+				<h3 class="navigation-title">Navigacija</h3>
+			</div>
+			<ul>
+				<li>
+					<a href="#html-main" class="inner-nav-link">HTML</a>
+				</li>
+				<li>
+					<a href="#html-5-0" class="inner-nav-link">HTML 5.0</a>
+					<ul>
+						<li>
+							<a href="#new-syntax" class="inner-nav-link">Nova syntaxa</a>
+						</li>
+						<li>
+							<a href="#new-semantic" class="inner-nav-link">Semantičke oznake</a>
+						</li>
+						<li>
+							<a href="#new-input" class="inner-nav-link">Tipovi unosa</a>
+						</li>
+						<li>
+							<a href="#new-audio-video" class="inner-nav-link">Audio i video</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#html-5-1" class="inner-nav-link">HTML 5.1</a>
+					<ul>
+						<li>
+							<a href="#picture-srcset" class="inner-nav-link">Picture element i srcset atribut</a>
+						</li>
+						<li><a href="#new-input-52" class="inner-nav-link">Novi tipovi unosa</a></li>
+						<li>
+							<a href="#summary-details" class="inner-nav-link">Details i summary elementi</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#html-5-2" class="inner-nav-link">HTML 5.2</a>
+					<ul>
+						<li><a href="#new-dialog" class="inner-nav-link">Novi dialog element</a></li>
+					</ul>
+				</li>
+			</ul>
+		</aside>
+
+		<main>
+			<div class="main-image-centered">
+				<img src="./images/html5.png" style="width: 100%;" alt="html5 logo" />
+			</div>
+			<section>
+				<h1 class="version-header" id="html-main">HTML</h1>
+				<p class="margined-paragraph">
+					<abbr title="Hypertext Markup Language">HTML</abbr> je standardni jezik označavanja za
+					dokumente dizajnirane za prikaz u web pregledniku. Uz njega koristimo jezik stiliranja
+					poput <abbr title="Cascading Style Sheets">CSS</abbr>-a i jezik skriptiranja kao što je
+					<abbr title="JavaScript">JS</abbr>.
+				</p>
+				<p class="margined-paragraph">
+					Web preglednici primaju HTML dokumente s web poslužitelja ili iz lokalne pohrane i
+					prikazuju ispis dokumenta na multimedijske web stranice. HTML opisuje strukturu web
+					stranice semantički i izvorno sadržava naznake za izgled dokumenta.
+				</p>
+				<p class="margined-paragraph">
+					HTML elementi su sastavni dijelovi HTML stranica. S HTML konstrukcijama, slikama i drugim
+					objektima, poput interaktivnih oblika, mogu biti ugrađeni u prikazanu stranicu. HTML pruža
+					sredstvo za stvaranje strukturiranih dokumenata označavanjem strukturne semantike teksta
+					kao što su: naslovi, odlomci, popisi, poveznice, citati i druge oznake. HTML elementi
+					odvojeni su oznakama napisanim u zagradama. Oznake kao što su
+					<code>&lt;img /></code> i <code>&lt;input /></code> izravno vežu sadržaj u stranicu.
+					Ostale oznake kao što <code>&lt;p ></code> okružuju i pružaju informacije o tekstu
+					dokumenta, a može sadržavati i druge oznake kao pod-elemente. Preglednici ne prikazuju
+					HTML oznake, ali koristite ih za tumačenje sadržaja stranice.
+				</p>
+			</section>
+			<section>
+				<h1 class="version-header" id="html-5-0">HTML 5.0</h1>
+				<h3 class="released-header">Objavljeno: 28. listopad 2014.</h3>
+				<p class="margined-paragraph">
+					Ova specifikacija definira 5. veliku reviziju glavnog jezika na World Wide Webu: Hypertext
+					Markup Language-a. U ovoj verziji uvode se nove značajke za pomoć autorima web aplikacija,
+					uvode se novi elementi temeljeni na istraživanju prevladavajuće autorske prakse, a posebna
+					pažnja posvećena je definiranju jasnih kriterija usklađenosti za korisničke agente u
+					nastojanju da se poboljša interoperabilnost.
+				</p>
+				<h2 class="sub-header" id="new-syntax">Novi syntax</h2>
+				<p class="margined-paragraph">
+					Prva razlika u novoj verziji HTML-a je sam izgled HTML dokumenta. Unesen je novi način
+					deklariranja HTML dokumenta. U prijašnjoj verziji HTML4, HTML dokument bi izgledao ovako:
+				</p>
+				<div class="paragraph-image">
+					<a class="fancy-box" href="/images/html4primjer.jpg"><img src="/images/html4primjer.jpg" alt="HTML4 primjer" style="width: 100%;" /></a>
+				</div>
+				<p>dok bi u novoj verziji, HTML5, to izgledalo ovako:</p>
+				<div class="paragraph-image">
+					<a class="fancy-box" href="/images/html5primjer.jpg"><img src="/images/html5primjer.jpg" alt="HTML5 primjer" style="width: 100%;" /></a>
+				</div>
+				<h2 class="sub-header" id="new-semantic">Semantičke oznake</h2>
+				<p class="margined-paragraph">
+					Sljedeće, dodane su nove semantičke oznake. Oznake poput <code>&lt;section /></code>,
+					<code>&lt;article /></code>, <code>&lt;footer /></code> pomažu nam bolje rasporediti
+					elemente unutar HTML dokumenta te svakom elementu zadati njegovu svrhu, kako bi znali
+					točno čemu svaki element služi. Uz pomoć ovih oznaka, tipična HTML5 stranica bi otprilike
+					izgledala ovako:
+				</p>
+				<div class="paragraph-image" style="width: 200px;">
+					<a class="fancy-box" href="/images/html5layout.jpg"><img src="/images/html5layout.jpg" alt="HTML5 layout" style="width: 100%;" /></a>
+				</div>
+				<ol class="element-listing">
+					<li>
+						<code>&lt;header></code> -
+						<span>
+							predstavlja skup uvodnih ili navigacijskih pomagala, u većini slučaja bi sadržavao
+							logotip ili ime tvrtke
+						</span>
+					</li>
+					<li>
+						<code>&lt;nav></code> -
+						<span>predstavlja odjeljak dokumenta namijenjen navigaciji</span>
+					</li>
+					<li>
+						<code>&lt;section></code> -
+						<span
+							>predstavlja generički dokument ili odjeljak web stranice. Koristimo ga zajedno s
+							elementima <code>&lt;h1 /></code>, <code>&lt;h2 /></code>,
+							<code>&lt;h3 /></code>,<code>&lt;h4 /></code>, <code>&lt;h5 /></code> i
+							<code>&lt;h6 /></code> za označavanje strukture dokumenta</span
+						>
+					</li>
+					<li>
+						<code>&lt;article></code> -
+						<span
+							>predstavlja neovisan dio dokumenta, poput bloga ili članaka u
+							novinama</span
+						>
+					</li>
+					<li>
+						<code>&lt;aside></code> -
+						<span
+							>predstavlja dio sadržaja koji je tek neznatno povezan s ostatkom stranice, primjer bi
+							bio navigacija unutar jedne web stranice</span
+						>
+					</li>
+					<li>
+						<code>&lt;footer></code> -
+						<span
+							>predstavlja podnožje za odjeljak i može sadržavati podatke o autoru, autorskim
+							pravima i ostale informacije</span
+						>
+					</li>
+				</ol>
+				<h2 class="sub-header" id="new-input">Tipovi unosa</h2>
+				<p class="margined-paragraph">
+					Prijašnje spomenut <code>&lt;input /></code> element, koji služi za korisnički unos
+					datuma, e-maila i drugih informacija , je dobio nekoliko novih tipova. Oni se koriste na
+					sljedeći način: <code>&lt;input type="tip_unosa" /></code>
+				</p>
+				<ol class="input-types-list">
+					<li>
+						<strong>tel</strong> - definira polje za unos telefonskog broja
+						<div>
+							<form><input type="tel" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>search</strong> - definira polje u koje se unosi vrijednost koju korisnik želi
+						pretražiti
+						<div>
+							<form><input type="search" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>url</strong> - definira polje koje prima samo URL
+						<div>
+							<form><input type="url" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>email</strong> - definira polje koje prima samo e-mail adresu
+						<div>
+							<form><input type="email" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>date</strong> - definira polje u kojem korisnik može odabrati neki datum
+						<div>
+							<form><input type="date" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>time</strong> - definira polje u kojem korisnik može odabrati neko vrijeme
+						<div>
+							<form><input type="time" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>number</strong> - definira polje koje prima samo neki broj kao svoju vrijednost
+						<div>
+							<form><input type="number" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>range</strong> - definira polje za odabir neke vrijednosti u kojem točna
+						vrijednost nije toliko važna, npr. filtar cijene na web shopu
+						<div>
+							<form><input type="range" /></form>
+						</div>
+					</li>
+					<li>
+						<strong>color</strong> - definira polje koje prima neku boju kao svoju vrijednost
+						<div>
+							<form><input type="color" /></form>
+						</div>
+					</li>
+				</ol>
+				<p class="margined-paragraph">
+					HTML5 je također uveo neke nove atribute. Atributi su svojstva koja modificiraju neki
+					element, na primjer, gore spomenut <code>&lt;input type="tip_unosa" /></code> ima atribut
+					<code>type</code>, uz mnoge druge. Među najvažnijim novim atributima je
+					<code>required</code>, koji se može stavit uz element <code>&lt;input /></code>. On
+					zahtijeva da neki <code>&lt;input /></code> element mora imati vrijednost prije nego što
+					se forma preda.
+				</p>
+
+				<form style="display: flex; flex-direction: column; width: 48%;">
+					<input required type="text" placeholder="Ime" style="margin-bottom: 4px;" />
+					<input required type="text" placeholder="Prezime" style="margin-bottom: 4px;" />
+					<input required type="number" placeholder="Semestar" style="margin-bottom: 4px;" />
+					<input type="submit" value="Predaj" style="margin-bottom: 4px;" />
+				</form>
+				<p>
+					Pošto elementi u ovoj formi imaju <code>required</code> atribut, forma se ne može predat
+					ukoliko je neko polje prazno. Gore navedeni elementi također sadrže još jedan novi
+					atribut, <code>placeholder</code>. <code>placeholder</code> je namijenjen kako bi
+					korisniku rekao što se treba nalaziti unutar tog elementa. Navedeni element ima
+					<code>placeholder="Ime"</code> te on izgleda ovako:
+					<code>&lt;input required type="text" placeholder="Ime"/></code>
+				</p>
+
+				<div>
+					<form><input required type="text" placeholder="Ime" style="margin: 4px 0px;" /></form>
+				</div>
+				<h2 class="sub-header" id="new-audio-video">Audio i video</h2>
+				<p class="margined-paragraph">
+					Još neki od važnih elemenata dodanih u HTML5 su <code>&lt;video /></code> i
+					<code>&lt;audio /></code>. Ukratko, oni nam daju mogućnost reproduciranja videa i zvuka.
+					Uz njih dolazi još i element <code>&lt;source /></code>, koji pokazuje na video ili audio
+					datoteku koju želimo reproducirati. Kako bi prikazali neki video na web stranici,
+					koristimo <code>&lt;video /></code> element na sljedeći način:
+				</p>
+				<p>
+					<code>
+						&lt;video controls><br />
+
+						&nbsp;&nbsp;&lt;source src="video/worldskills.mp4" type="video/mp4"><br />
+
+						&nbsp;&nbsp;&lt;source src="video/worldskills.webm" type="video/webm"><br />
+
+						&nbsp;&nbsp;Sorry, your browser doesn't support embedded videos.<br />
+						&lt;/video>
+					</code>
+				</p>
+				<p class="margined-paragraph">
+					Gdje atribut <code>controls</code> znači da će preglednik ponuditi kontrole za
+					kontroliranje reprodukcije, zvuka, pauziranje i ostale mogućnosti. U ovom slučaju smo
+					koristili više <code>&lt;source /></code>
+					elementa sa različitim izvorima. Preglednik će odabrati prvi format izvora kojeg prepozna.
+					Ukoliko preglednik ne prepozne niti jedan od izvora, prikazat će poruku da se video ne
+					može reproducirat.
+				</p>
+				<video controls class="picture-show">
+					<source
+						src="video/worldskills.mp4"
+						type="video/mp4"
+					/>
+					<source
+						src="video/worldskills.webm"
+						type="video/webm"
+					/>
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+			</section>
+			<section>
+				<h1 class="version-header" id="html-5-1">HTML 5.1</h1>
+				<h3 class="released-header">Objavljeno: 1. studeni 2016.</h3>
+				<p class="margined-paragraph">
+					Ova specifikacija definira petu glavnu verziju, te prvu manju reviziju osnovnog jezika
+					World Wide Weba: HTML. U ovoj se verziji i dalje uvode nove karakteristike kako bi se
+					pomoglo autorima web aplikacija, novi elementi se i dalje uvode, te dobivamo nekolicinu
+					novih atributa. Naravno, razlika između verzija HTML 5.0 i HTML 5.1 nije ni približno
+					velika kao razlika između HTML 4 i HTML 5.0.
+				</p>
+				<h2 class="sub-header" id="picture-srcset">Picture element i srcset atribut</h2>
+				<p class="margined-paragraph">
+					Dodan je novi element, <code>&lt;picture /></code>, koji omogućuje prikazivanje različitih
+					slika ovisno o rezoluciji preglednika.
+				</p>
+				<code>
+					&lt;picture><br />
+					&nbsp;&nbsp;&lt;source srcset="images/novost1.jpg"
+					media="(min-width: 1500px)"><br />
+					&nbsp;&nbsp;&lt;source srcset="images/novost2.jpg"
+					media="(min-width: 1000px)"><br />
+					&nbsp;&nbsp;&lt;img src="images/novost3.jpg"><br />
+					&lt;/picture>
+				</code>
+				<div style="margin-top: 1rem;">
+					<picture>
+						<source
+							srcset="images/novost1.jpg"
+							media="(min-width: 1500px)"
+						/>
+						<source
+							srcset="images/novost2.jpg"
+							media="(min-width: 1000px)"
+						/>
+						<img class="picture-show" src="images/novost3.jpg" alt="Picture" />
+					</picture>
+				</div>
+				<p class="margined-paragraph">
+					Tako će se gore navedena slika mijenjati, ovisno o širini preglednika.
+					<code>srcset</code> atribut je veoma sličan <code>src</code> atributu, ali
+					<code>srcset</code> daje mogućnost navođenja više izvora. Npr.
+					<code>srcset="novost1.jpg, novost11.jpg"</code>
+				</p>
+
+				<h2 class="sub-header" id="new-input-52">Novi tipovi unosa</h2>
+				<p class="margined-paragraph">
+					Kao i u prošloj verziji, imamo neke nove tipove unosa.
+					<code>week</code> i <code>month</code> su dodani te služe za unos točno nekog tjedna ili
+					mjeseca.
+				</p>
+				<form><input type="week" /></form>
+				<form><input type="month" style="margin-top: 1rem;" /></form>
+
+				<h2 class="sub-header" id="summary-details">Details i summary elementi</h2>
+				<p class="margined-paragraph">
+					Dodan je novi element, <code>&lt;details /></code> koji se koristi zajedno sa novim
+					<code>&lt;summary /></code> elementom. Zajedno daju mali "meni" koji se može kliknuti za
+					više detalja, te on izgleda ovako:
+				</p>
+				<div>
+					<details>
+						<summary>
+							Summary
+						</summary>
+						Details
+					</details>
+				</div>
+			</section>
+			<section>
+				<h1 class="version-header" id="html-5-2">HTML 5.2</h1>
+				<h3 class="released-header">Objavljeno: 14. prosinac 2017.</h3>
+				<p class="margined-paragraph">
+					Ova specifikacija definira petu glavnu verziju, te drugu manju reviziju osnovnog jezika
+					World Wide Weba: HTML. Razlike nisu velike, te nije bilo puno novih elemenata ili
+					atributa.
+				</p>
+				<h2 class="sub-header" id="new-dialog">Novi dialog element</h2>
+				<p class="margined-paragraph">
+					Dodan je novi <code>&lt;dialog /></code> element, koji označava neki dialog. On ima svoj
+					<code>open</code> atribut koji govori je li dialog vidljiv ili nije. Pomoću JavaScripta možemo ga kontrolirati. Za izlaz iz dialoga koristite ESC.
+				</p>
+				<button id="dialog-btn">Prikaži dialog</button>
+				<dialog id="dialog">
+					<p>Dialog</p>
+				</dialog>
+			</section>
+		</main>
+		<footer>
+			<h1>Literatura</h1>
+			<div>
+				<a href="https://www.w3.org/TR/2014/REC-html5-20141028/"
+					>https://www.w3.org/TR/2014/REC-html5-20141028/</a
+				>
+			</div>
+			<div>
+				<a href="https://www.w3.org/TR/2016/REC-html51-20161101/"
+					>https://www.w3.org/TR/2016/REC-html51-20161101/</a
+				>
+			</div>
+			<div>
+				<a href="https://www.w3.org/TR/2017/REC-html52-20171214/"
+					>https://www.w3.org/TR/2017/REC-html52-20171214/</a
+				>
+			</div>
+			<div>
+				<a href="https://en.wikipedia.org/wiki/HTML">https://en.wikipedia.org/wiki/HTML</a>
+			</div>
+			<div>
+				<a href="https://www.w3schools.com/html/html5_intro.asp"
+					>https://www.w3schools.com/html/html5_intro.asp</a
+				>
+			</div>
+			<div>
+				<a href="https://www.w3.org/TR/html5-diff/">https://www.w3.org/TR/html5-diff/</a>
+			</div>
+			<div>
+				<a href="https://www.w3schools.com/html/html5_new_elements.asp"
+					>https://www.w3schools.com/html/html5_new_elements.asp</a
+				>
+			</div>
+			<div>
+				<a href="https://www.w3schools.com/html/html_layout.asp"
+					>https://www.w3schools.com/html/html_layout.asp</a
+				>
+			</div>
+		</footer>
+		<form id="Kontakt" title="Kontakt" action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="get">
+			<div>
+				<label for="name">Puno ime:</label>
+			</div>
+			<div>
+			<input required id="name" type="text" value="" />
+			</div>
+			<div>
+				<label for="email">E-mail:</label>
+			</div>
+			<div>
+				<input required id="email" type="email" value="" />
+			</div>
+			<div>
+				<label for="importance">Važnost poruke:</label>
+			</div>
+			<div>
+				<select id="importance">
+					<option value="low">Niska</option>
+					<option value="high">Visoka</option>
+				</select>
+			</div>
+			<div>
+				<label for="message">Vaša poruka:</label>
+			</div>
+			<div>
+				<textarea required cols="56" rows="10" id="txtNapomena"
+			></textarea>
+			</div>
+			<div>
+				<label for="newsletter">Primaj newsletter: </label>
+				<input id="newsletter" type="checkbox" value="" />
+			</div>
+			<div>
+				<button id="odustani" type="reset">Odustani</button>
+				<button id="posalji" type="submit">Pošalji</button>
+			</div>
+		</form>
+	</body>
+	<script src="script.js"></script>
+	<script src="index.js"></script>
+</html>

@@ -21,6 +21,7 @@
 			rel="stylesheet"
 		/>
 		<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<title>HTML&CSS Verzije</title>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
 
@@ -32,17 +33,15 @@
 	</head>
 	<body>
 		<nav>
-			<div>
-				<a href="./index.html" class="nav-link">HTML</a>
-			</div>
-			<div>
-				<a href="./css.html" class="nav-link">CSS</a>
-			</div>
-			<div>
-				<a href="./nastavni.html" class="nav-link">Nastavni plan</a>
-			</div>
-			<div>
-				<a id="btnKontakt" href="#" class="nav-link">Kontakt</a>
+			<div class="content-nav">
+				<ul class="menu-list">
+					<div class="icon menu-close"><span class="material-icons">clear</span></div>
+					<li><a href="./index.html" class="nav-link">HTML</a></li>
+					<li><a href="./css.html" class="nav-link">CSS</a></li>
+					<li><a href="./nastavni.html" class="nav-link">Nastavni plan</a></li>
+					<li><a id="btnKontakt" href="#" class="nav-link">Kontakt</a></li>
+				</ul>
+				<div class="icon menu-btn"><span class="material-icons">view_headline</span></div>
 			</div>
 		</nav>
 
@@ -51,13 +50,13 @@
 				<h3 class="navigation-title">Navigacija</h3>
 			</div>
 			<ul>
-				<li><a href="#css-main" class="inner-nav-link">CSS</a></li>
-				<li><a href="#animations" class="inner-nav-link">CSS animacije</a></li>
-				<li><a href="#calculations" class="inner-nav-link">CSS kalkukacije</a></li>
-				<li><a href="#gradients" class="inner-nav-link">CSS gradijenti</a></li>
-				<li><a href="#fonts" class="inner-nav-link">Fontovi</a></li>
-				<li><a href="#borders" class="inner-nav-link">Border slike</a></li>
-				<li><a href="#queries" class="inner-nav-link">Media Queries</a></li>
+				<li><a href="#css-main" id="aside-nav-1" class="inner-nav-link">CSS</a></li>
+				<li><a href="#animations" id="aside-nav-2" class="inner-nav-link">CSS animacije</a></li>
+				<li><a href="#calculations" id="aside-nav-3" class="inner-nav-link">CSS kalkukacije</a></li>
+				<li><a href="#gradients" id="aside-nav-4" class="inner-nav-link">CSS gradijenti</a></li>
+				<li><a href="#fonts" id="aside-nav-5" class="inner-nav-link">Fontovi</a></li>
+				<li><a href="#borders" id="aside-nav-6" class="inner-nav-link">Border slike</a></li>
+				<li><a href="#queries" id="aside-nav-7" class="inner-nav-link">Media Queries</a></li>
 			</ul>
 		</aside>
 
@@ -294,43 +293,54 @@
 			</div>
 		</footer>
 		<form id="Kontakt" title="Kontakt" action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="get">
+			<div class="kontaktTitle">
+				Kontakt
+			</div>
 			<div>
 				<label for="name">Puno ime:</label>
 			</div>
 			<div>
-			<input required id="name" type="text" value="" />
+			<input required id="name" name="name" type="text" value="" />
 			</div>
 			<div>
 				<label for="email">E-mail:</label>
 			</div>
 			<div>
-				<input required id="email" type="email" value="" />
+				<input required id="email" name="email" type="email" value="" />
 			</div>
 			<div>
 				<label for="importance">Važnost poruke:</label>
 			</div>
 			<div>
-				<select id="importance">
-					<option value="high">Visoka</option>
+				<select name="importance" id="importance">
 					<option value="low">Niska</option>
+					<option value="high">Visoka</option>
 				</select>
 			</div>
 			<div>
 				<label for="message">Vaša poruka:</label>
 			</div>
 			<div>
-				<textarea required cols="56" rows="10" id="txtNapomena"
-			></textarea>
+				<textarea name="message" required cols="50" rows="10" id="txtNapomena"></textarea>
 			</div>
 			<div>
 				<label for="newsletter">Primaj newsletter: </label>
-				<input id="newsletter" type="checkbox" value="" />
+				<input name="newsletter" id="newsletter" type="checkbox"/>
 			</div>
 			<div>
 				<button id="odustani" type="reset">Odustani</button>
 				<button id="posalji" type="submit">Pošalji</button>
 			</div>
 		</form>
+		<div class="statusMessage" id="statusMessageYes">
+			<div class="statusImg"><img src="images/checkmark.png" alt=""></div>
+			<div>Kontakt informacije su uspjesno poslane!</div> 
+		</div>
+		<div class="statusMessage" id="statusMessageNo">
+			<div class="statusImg"><img src="images/error.png" alt=""></div>
+			<div>Kontakt informacije nisu uspjesno poslana!</div> 
+		</div>
 	</body>
 	<script src="script.js"></script>
+	<script src="css.js"></script>
 </html>

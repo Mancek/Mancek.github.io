@@ -5,10 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Manuel" />
 		<title>HTML&CSS Versions</title>
-		<link
-		href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
-		rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
 		
@@ -23,19 +21,16 @@
 	</head>
 	<body>
 		<nav>
-			<div>
-				<a href="./index.html" class="nav-link">HTML</a>
+			<div class="content-nav">
+				<ul class="menu-list">
+					<div class="icon menu-close"><span class="material-icons">clear</span></div>
+					<li><a href="./index.html" class="nav-link">HTML</a></li>
+					<li><a href="./css.html" class="nav-link">CSS</a></li>
+					<li><a href="./nastavni.html" class="nav-link">Nastavni plan</a></li>
+					<li><a id="btnKontakt" href="#" class="nav-link">Kontakt</a></li>
+				</ul>
+				<div class="icon menu-btn"><span class="material-icons">view_headline</span></div>
 			</div>
-			<div>
-				<a href="./css.html" class="nav-link">CSS</a>
-			</div>
-			<div>
-				<a href="./nastavni.html" class="nav-link">Nastavni plan</a>
-			</div>
-			<div>
-				<a id="btnKontakt" href="#" class="nav-link">Kontakt</a>
-			</div>
-			
 		</nav>
 
 		<aside>
@@ -44,41 +39,41 @@
 			</div>
 			<ul>
 				<li>
-					<a href="#html-main" class="inner-nav-link">HTML</a>
+					<a href="#html-main" id="aside-nav-1" class="inner-nav-link">HTML</a>
 				</li>
 				<li>
-					<a href="#html-5-0" class="inner-nav-link">HTML 5.0</a>
+					<a href="#html-5-0" id="aside-nav-2" class="inner-nav-link">HTML 5.0</a>
 					<ul>
 						<li>
-							<a href="#new-syntax" class="inner-nav-link">Nova syntaxa</a>
+							<a href="#new-syntax" id="aside-nav-3" class="inner-nav-link">Nova syntaxa</a>
 						</li>
 						<li>
-							<a href="#new-semantic" class="inner-nav-link">Semantičke oznake</a>
+							<a href="#new-semantic" id="aside-nav-4" class="inner-nav-link">Semantičke oznake</a>
 						</li>
 						<li>
-							<a href="#new-input" class="inner-nav-link">Tipovi unosa</a>
+							<a href="#new-input" id="aside-nav-5" class="inner-nav-link">Tipovi unosa</a>
 						</li>
 						<li>
-							<a href="#new-audio-video" class="inner-nav-link">Audio i video</a>
+							<a href="#new-audio-video" id="aside-nav-6" class="inner-nav-link">Audio i video</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#html-5-1" class="inner-nav-link">HTML 5.1</a>
+					<a href="#html-5-1" id="aside-nav-7" class="inner-nav-link">HTML 5.1</a>
 					<ul>
 						<li>
-							<a href="#picture-srcset" class="inner-nav-link">Picture element i srcset atribut</a>
+							<a href="#picture-srcset" id="aside-nav-8" class="inner-nav-link">Picture element i srcset atribut</a>
 						</li>
-						<li><a href="#new-input-52" class="inner-nav-link">Novi tipovi unosa</a></li>
+						<li><a href="#new-input-52" id="aside-nav-9" class="inner-nav-link">Novi tipovi unosa</a></li>
 						<li>
-							<a href="#summary-details" class="inner-nav-link">Details i summary elementi</a>
+							<a href="#summary-details" id="aside-nav-10" class="inner-nav-link">Details i summary elementi</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="#html-5-2" class="inner-nav-link">HTML 5.2</a>
+					<a href="#html-5-2" id="aside-nav-11" class="inner-nav-link">HTML 5.2</a>
 					<ul>
-						<li><a href="#new-dialog" class="inner-nav-link">Novi dialog element</a></li>
+						<li><a href="#new-dialog" id="aside-nav-12" class="inner-nav-link">Novi dialog element</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -123,7 +118,7 @@
 					pažnja posvećena je definiranju jasnih kriterija usklađenosti za korisničke agente u
 					nastojanju da se poboljša interoperabilnost.
 				</p>
-				<h2 class="sub-header" id="new-syntax">Novi syntax</h2>
+				<h2 class="sub-header" id="new-syntax">Nova syntaxa</h2>
 				<p class="margined-paragraph">
 					Prva razlika u novoj verziji HTML-a je sam izgled HTML dokumenta. Unesen je novi način
 					deklariranja HTML dokumenta. U prijašnjoj verziji HTML4, HTML dokument bi izgledao ovako:
@@ -447,23 +442,26 @@
 			</div>
 		</footer>
 		<form id="Kontakt" title="Kontakt" action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="get">
+			<div class="kontaktTitle">
+				Kontakt
+			</div>
 			<div>
 				<label for="name">Puno ime:</label>
 			</div>
 			<div>
-			<input required id="name" type="text" value="" />
+			<input required id="name" name="name" type="text" value="" />
 			</div>
 			<div>
 				<label for="email">E-mail:</label>
 			</div>
 			<div>
-				<input required id="email" type="email" value="" />
+				<input required id="email" name="email" type="email" value="" />
 			</div>
 			<div>
 				<label for="importance">Važnost poruke:</label>
 			</div>
 			<div>
-				<select id="importance">
+				<select name="importance" id="importance">
 					<option value="low">Niska</option>
 					<option value="high">Visoka</option>
 				</select>
@@ -472,18 +470,25 @@
 				<label for="message">Vaša poruka:</label>
 			</div>
 			<div>
-				<textarea required cols="56" rows="10" id="txtNapomena"
-			></textarea>
+				<textarea name="message" required cols="50" rows="10" id="txtNapomena"></textarea>
 			</div>
 			<div>
 				<label for="newsletter">Primaj newsletter: </label>
-				<input id="newsletter" type="checkbox" value="" />
+				<input name="newsletter" id="newsletter" type="checkbox"/>
 			</div>
 			<div>
 				<button id="odustani" type="reset">Odustani</button>
 				<button id="posalji" type="submit">Pošalji</button>
 			</div>
 		</form>
+		<div class="statusMessage" id="statusMessageYes">
+			<div class="statusImg"><img src="images/checkmark.png" alt=""></div>
+			<div>Kontakt informacije su uspjesno poslane!</div> 
+		</div>
+		<div class="statusMessage" id="statusMessageNo">
+			<div class="statusImg"><img src="images/error.png" alt=""></div>
+			<div>Kontakt informacije nisu uspjesno poslana!</div> 
+		</div>
 	</body>
 	<script src="script.js"></script>
 	<script src="index.js"></script>

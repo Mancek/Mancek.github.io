@@ -5,10 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Manuel" />
 		<title>HTML&CSS Versions</title>
-		<link
-		href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
-		rel="stylesheet"
-		/>
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.js"></script>
 		
@@ -20,73 +18,72 @@
 	</head>
 	<body>
 		<nav>
-			<div>
-				<a href="./index.html" class="nav-link">HTML</a>
+			<div class="content-nav">
+				<ul class="menu-list">
+					<div class="icon menu-close"><span class="material-icons">clear</span></div>
+					<li><a href="./index.html" class="nav-link">HTML</a></li>
+					<li><a href="./css.html" class="nav-link">CSS</a></li>
+					<li><a href="./nastavni.html" class="nav-link">Nastavni plan</a></li>
+					<li><a id="btnKontakt" href="#" class="nav-link">Kontakt</a></li>
+				</ul>
+				<div class="icon menu-btn"><span class="material-icons">view_headline</span></div>
 			</div>
-			<div>
-				<a href="./css.html" class="nav-link">CSS</a>
-			</div>
-			<div>
-				<a href="./nastavni.html" class="nav-link">Nastavni plan</a>
-			</div>
-			<div>
-				<a id="btnKontakt" href="#" class="nav-link">Kontakt</a>
-			</div>
-			
 		</nav>
+		
 		<div class="KolegijiNaziv">
 			<div>
-				<h3>Naziv kolegija:</h3>
+				Naziv kolegija:
 			</div>
 			<div class="kolegijTxtbox">
 				<input id="txtKolegiji" type="text" value="" />
 			</div>
 		</div>
-		<main>
-			<table class="nastavni-plan">
-				<thead>
-					<th>Kolegij</th>
-					<th>ECTS</th>
-					<th>Sati</th>
-					<th>P</th>
-					<th>V</th>
-					<th>Tip</th>
-					<th>Semestar</th>
-					<th></th>
-				</thead>
-				<tbody></tbody>
-				<tfoot>
-					<tr>
-						<td>Ukupno:</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-				</tfoot>
-			</table>
-		</main>
+		<table class="nastavni-plan">
+			<thead>
+				<th>Kolegij</th>
+				<th>ECTS</th>
+				<th>Sati</th>
+				<th>P</th>
+				<th>V</th>
+				<th>Tip</th>
+				<th>Semestar</th>
+				<th></th>
+			</thead>
+			<tbody></tbody>
+			<tfoot>
+				<tr>
+					<td>Ukupno:</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
 		<form id="Kontakt" title="Kontakt" action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="get">
+			<div class="kontaktTitle">
+				Kontakt
+			</div>
 			<div>
 				<label for="name">Puno ime:</label>
 			</div>
 			<div>
-			<input required id="name" type="text" value="" />
+			<input required id="name" name="name" type="text" value="" />
 			</div>
 			<div>
 				<label for="email">E-mail:</label>
 			</div>
 			<div>
-				<input required id="email" type="email" value="" />
+				<input required id="email" name="email" type="email" value="" />
 			</div>
 			<div>
 				<label for="importance">Važnost poruke:</label>
 			</div>
 			<div>
-				<select id="importance">
+				<select name="importance" id="importance">
 					<option value="low">Niska</option>
 					<option value="high">Visoka</option>
 				</select>
@@ -95,18 +92,25 @@
 				<label for="message">Vaša poruka:</label>
 			</div>
 			<div>
-				<textarea required cols="56" rows="10" id="txtNapomena"
-			></textarea>
+				<textarea name="message" required cols="50" rows="10" id="txtNapomena"></textarea>
 			</div>
 			<div>
 				<label for="newsletter">Primaj newsletter: </label>
-				<input id="newsletter" type="checkbox" value="" />
+				<input name="newsletter" id="newsletter" type="checkbox"/>
 			</div>
 			<div>
 				<button id="odustani" type="reset">Odustani</button>
 				<button id="posalji" type="submit">Pošalji</button>
 			</div>
 		</form>
+		<div class="statusMessage" id="statusMessageYes">
+			<div class="statusImg"><img src="images/checkmark.png" alt=""></div>
+			<div>Kontakt informacije su uspjesno poslane!</div> 
+		</div>
+		<div class="statusMessage" id="statusMessageNo">
+			<div class="statusImg"><img src="images/error.png" alt=""></div>
+			<div>Kontakt informacije nisu uspjesno poslana!</div> 
+		</div>
 	</body>
 	<script src="script.js"></script>
     <script src="nastavni.js"></script>

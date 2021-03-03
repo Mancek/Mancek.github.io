@@ -1,16 +1,19 @@
 $(() => {
-    $("table").on('click','#deleteKolegij',function(){
-        $(this).closest('tr').remove();
-        SumECTS();
-        SumSati();
+    $('table').on('click','#deleteKolegij', function() {
+        let removedrow = $(this).closest('tr');
+        removedrow.remove();
+        SumECTS(-$('td', removedrow).eq(1).text());
+        SumSati(-$('td', removedrow).eq(2).text());
      });
 });
 
 const xhr = new XMLHttpRequest();
 let KolegijData;
 let ActiveKolegij;
+let SUMECTS = 0;
+let SUMSati = 0;
 xhr.open('get', 'http://www.fulek.com/VUA/SUPIT/GetNastavniPlan');
-xhr.onreadystatechange = function () {
+xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status === 200) {
         FillData(JSON.parse(xhr.responseText));
     }
@@ -22,16 +25,17 @@ function FillData(data) {
     KolegijData = data;
 }
 
-$('#txtKolegiji').on('change', function() {
+$('#txtKolegiji').on('change', () => {
     const xhrkolegij = new XMLHttpRequest();
-    const id = KolegijData.find(x => x.label === $("#txtKolegiji").val()).value;
+    const id = KolegijData.find(x => x.label === $('#txtKolegiji').val()).value;
     xhrkolegij.open('get', `http://www.fulek.com/VUA/SUPIT/GetKolegij/${id}`);
-    xhrkolegij.onreadystatechange = function () {
+    xhrkolegij.onreadystatechange = () => {
         if (xhrkolegij.readyState === 4 && xhrkolegij.status === 200) {
             ShowData(JSON.parse(xhrkolegij.responseText));
         }
     }
     xhrkolegij.send();
+    $('#txtKolegiji').val("");
 });
 
 
@@ -48,34 +52,17 @@ function ShowData(element) {
         <td>${element.semestar}</td>
         <td><button id="deleteKolegij">Obriši</button></td>
     </tr>`;
-    SumECTS();
-    SumSati();
+    SumECTS(element.ects);
+    SumSati(element.sati);
 }
 
-function SumECTS() {
-    var total = 0;
-    $('tbody tr').each(function() {
-        total += +$('td', this).eq(1).text(); //+ will convert string to number
-    });
-    $('table tfoot td').eq(1).text(total);
+function SumECTS(number) {
+    SUMECTS += number;
+    $('table tfoot td').eq(1).text(SUMECTS);
 }
 
 
-function SumSati() {
-    var total = 0;
-    $('tbody tr').each(function() {
-        total += +$('td', this).eq(2).text(); //+ will convert string to number
-    });
-    $('table tfoot td').eq(2).text(total);
+function SumSati(number) {
+    SUMSati += number;
+    $('table tfoot td').eq(2).text(SUMSati);
 }
-/*
-function calculateColumn(index) {
-    var total = 0;
-    $('table tr').each(function() {
-        var value = parseInt($('td', this).eq(index).text());
-        if (!isNaN(value)) {
-            total += value;
-        }
-    });
-    $('table tfoot td').eq(index).text('Total: ' + total);
-}*/
